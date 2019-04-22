@@ -1,0 +1,26 @@
+{
+  "name": "Create React App Sample",
+  "description": "Example for rekit-chrome-extension-boilerplate",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "React Chrome Extension Example"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "32": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "content_scripts": [{
+    "js": [ "content.js"],
+    "matches": [ "<all_urls>"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources" : ["*.html"],
+  "permissions": [ "contextMenus", "tabs", "storage" ],
+  "content_security_policy": "script-src 'self' 'sha256-5As4+3YpY62+l38PsxCEkjB1R4YtyktBtRScTJ3fyLU='; object-src 'self'"
+}
