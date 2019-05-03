@@ -14,13 +14,13 @@
     "128": "favicon.ico"
   },
   "content_scripts": [{
-    "js": [ "content.js"],
+    "js": [ "profile-schema.js", "content.js"],
     "matches": [ "<all_urls>"]
   }],
   "background": {
     "scripts": ["background.js"]
   },
   "web_accessible_resources" : ["*.html"],
-  "permissions": [ "contextMenus", "tabs", "storage" ],
+  "permissions": [ "contextMenus", "tabs", "storage", "activeTab" ],
   "content_security_policy": "script-src 'self' 'sha256-5As4+3YpY62+l38PsxCEkjB1R4YtyktBtRScTJ3fyLU='; object-src 'self'"
 }
